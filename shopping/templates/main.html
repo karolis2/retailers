@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Countries</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <h3>Countries</h3>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <select class="form-control" placeholder="Country" name="country" >
+            {% for city in restricted_cities %}
+                <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>&nbsp;
+        <div><input type="submit" name="restricted_retailers" value="Restricted Retailers"></div>&nbsp;
+
+        <h3>Retailers</h3>
+         <select class="form-control" placeholder="Retailer" name="retailer" >
+            {% for retailer in retailers %}
+                <option value="{{ retailer }}">{{ retailer }}</option>
+            {% endfor %}
+        </select>&nbsp;
+        <div><input type="submit" name="show_countries" value="Restricted Countries"></div>
+    </form>
+
+</div>
+</body>
+</html>
+
