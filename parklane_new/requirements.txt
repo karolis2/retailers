@@ -1,5 +1,5 @@
 asgiref==3.2.3
-Django==1.5.11
+Django==2.2.24
 django-mongodb-engine==0.6.0
 djangotoolbox==1.8.0
 mongoengine==0.19.1
